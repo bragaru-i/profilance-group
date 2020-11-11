@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from './HomePage/HomePage';
 const ROUTES = [
   { path: '/', key: 'ROOT', exact: true, component: HomePage },
+
+
   {
     path: '/page-a',
     key: 'Page-A',

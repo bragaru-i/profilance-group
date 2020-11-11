@@ -1,11 +1,11 @@
 import React from 'react';
+import Navigation from './components/Navigation/Navigation';
 
 const Layout = (props) => {
   return (
     <>
-      <div>
-        Main Navigation goes here and stuff like that
-        {/* Here goes main Navigation, footer and so on */}
+      <div className="row">
+        <Navigation />
         {props.children}
         Footer goes here
       </div>
