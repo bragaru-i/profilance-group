@@ -14,4 +14,19 @@
   margin: 0 auto;
   top: 40vh;
   position: relative;
+  border-top-right-radius: 0.5rem;
+  &_Title {
+    position: relative;
+    padding: 1.7rem 1.9rem;
+
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: center;
+  }
+  &_Close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

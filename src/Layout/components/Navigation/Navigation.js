@@ -11,6 +11,7 @@ import styles from './Navigation.module.scss';
 
 const Navigation = ({ logout, auth }) => {
   const [showLogin, setShowLogin] = useState(false);
+
   const authLink = auth.isAuth ? (
     <>
       {auth.role} <span onClick={logout}>Logout</span>{' '}
@@ -20,8 +21,8 @@ const Navigation = ({ logout, auth }) => {
   );
   const closeLogin = () => setShowLogin(false);
   const login = showLogin && (
-    <Modal title="Login Form" open={showLogin} onClickHandler={closeLogin}>
-      <LoginForm />
+    <Modal title="Login Form" open={showLogin} closeModal={closeLogin}>
+      <LoginForm closeLogin={closeLogin} />
     </Modal>
   );
   console.log(showLogin);

@@ -1,4 +1,4 @@
-### Практическое задание на вакансию Frontend-разработчика
+# Практическое задание на вакансию Frontend-разработчика
 
 ## Задание 1.
 
@@ -31,3 +31,10 @@ pass: admin
 USER:
 user: user
 pass: user
+
+### General info about styling
+
+1rem = 10px;
+CSS-SCSS-modules
+
+using Icons: - <Icon name="close-window" width="2rem" ... />

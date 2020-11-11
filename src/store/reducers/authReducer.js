@@ -8,10 +8,12 @@ const initialSTate = {
 const authReducer = (state = initialSTate, { type, payload }) => {
   switch (type) {
     case actionTypes.AUTHENTICATE:
-      return { ...state, isAuth: true, role: payload };
+      return { ...state, isAuth: true, role: payload, error: '' };
+    case actionTypes.AUTHENTICATE_START:
+      return { ...state, error: '' };
 
     case actionTypes.UNAUTHENTICATE:
-      return { ...state, isAuth: false, role: '' };
+      return { ...state, isAuth: false, role: '', error: '' };
     case actionTypes.AUTHENTICATE_FAIL:
       return { ...state, isAuth: false, error: 'Credentials are not valid', role: '' };
     default:
