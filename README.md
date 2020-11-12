@@ -24,6 +24,10 @@
 
 Предоставлены логин и пароль 2 тестовых пользователей.
 
+Production:
+https://fargusmd.github.io/profilance-group/ 
+https://profilance.herokuapp.com/profilance-group/
+
 ADMIN:
 user: admin
 pass: admin
