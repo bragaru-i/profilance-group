@@ -3,13 +3,13 @@
     "main.css": "/profilance-group/static/css/main.a8f820c6.chunk.css",
     "main.js": "/profilance-group/static/js/main.81e4cb79.chunk.js",
     "main.js.map": "/profilance-group/static/js/main.81e4cb79.chunk.js.map",
-    "runtime-main.js": "/profilance-group/static/js/runtime-main.665c3be3.js",
-    "runtime-main.js.map": "/profilance-group/static/js/runtime-main.665c3be3.js.map",
+    "runtime-main.js": "/profilance-group/static/js/runtime-main.281b0f6a.js",
+    "runtime-main.js.map": "/profilance-group/static/js/runtime-main.281b0f6a.js.map",
     "static/js/2.be560fe2.chunk.js": "/profilance-group/static/js/2.be560fe2.chunk.js",
     "static/js/2.be560fe2.chunk.js.map": "/profilance-group/static/js/2.be560fe2.chunk.js.map",
     "static/css/3.129a0028.chunk.css": "/profilance-group/static/css/3.129a0028.chunk.css",
-    "static/js/3.a3b13062.chunk.js": "/profilance-group/static/js/3.a3b13062.chunk.js",
-    "static/js/3.a3b13062.chunk.js.map": "/profilance-group/static/js/3.a3b13062.chunk.js.map",
+    "static/js/3.94dbcd39.chunk.js": "/profilance-group/static/js/3.94dbcd39.chunk.js",
+    "static/js/3.94dbcd39.chunk.js.map": "/profilance-group/static/js/3.94dbcd39.chunk.js.map",
     "static/js/4.490a18f0.chunk.js": "/profilance-group/static/js/4.490a18f0.chunk.js",
     "static/js/4.490a18f0.chunk.js.map": "/profilance-group/static/js/4.490a18f0.chunk.js.map",
     "index.html": "/profilance-group/index.html",
@@ -18,7 +18,7 @@
     "static/js/2.be560fe2.chunk.js.LICENSE.txt": "/profilance-group/static/js/2.be560fe2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.665c3be3.js",
+    "static/js/runtime-main.281b0f6a.js",
     "static/js/2.be560fe2.chunk.js",
     "static/css/main.a8f820c6.chunk.css",
     "static/js/main.81e4cb79.chunk.js"
