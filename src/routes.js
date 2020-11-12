@@ -9,27 +9,27 @@ import AddArticle from './News/components/AddArticle/AddArticle';
 import Article from './News/components/Article/Article';
 
 const ROUTES = [
-  { path: '/', key: 'ROOT', exact: true, component: HomePage },
+  { path: '/profilance-group/', key: 'ROOT', exact: true, component: HomePage },
 
   {
-    path: '/news',
+    path: '/profilance-group/news',
     key: 'NEWS',
     component: RenderRoutes,
     routes: [
       {
-        path: '/news',
+        path: '/profilance-group/news',
         key: 'NEWS_ROOT',
         exact: true,
         component: AllNews,
       },
       {
-        path: '/news/add',
+        path: '/profilance-group/news/add',
         key: 'NEWS_ADD',
         exact: true,
         component: AddArticle,
       },
       {
-        path: '/news/:newsid',
+        path: '/profilance-group/news/:newsid',
         key: `A_PARTICULAR_NEW`,
         exact: true,
         component: Article,

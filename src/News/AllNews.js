@@ -51,7 +51,7 @@ const AllNews = ({ auth, news, approveNews, deleteNews }) => {
   if (auth.role === 'user')
     addNewsLink = (
       <div className={styles.AddNew}>
-        <Link to="/news/add">Add a New Article</Link>
+        <Link to="/profilance-group/news/add">Add a New Article</Link>
       </div>
     );
 

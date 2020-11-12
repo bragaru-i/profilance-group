@@ -16,7 +16,7 @@ const ArticleInAList = ({
   let display = '';
   display = isAdmin && (
     <li className={styles.List_Item}>
-      <Link to={`/news/${id}`}>
+      <Link to={`/profilance-group/news/${id}`}>
         <div className={styles.List_Author}>
           {name} on {date}
         </div>
@@ -38,7 +38,7 @@ const ArticleInAList = ({
   if (!isAdmin && isAproved) {
     display = (
       <li className={styles.List_Item}>
-        <Link to={`/news/${id}`}>
+        <Link to={`/profilance-group/news/${id}`}>
           <div className={styles.List_Author}>
             {name} on {date}
           </div>
