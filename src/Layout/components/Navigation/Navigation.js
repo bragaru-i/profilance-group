@@ -43,10 +43,10 @@ const Navigation = ({ logout, auth }) => {
       <nav className={styles.Nav_Items_Container}>
         <ul className={styles.Nav_Items}>
           <li className={styles.Nav_Item}>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/profilance-group/">Home</NavLink>
           </li>
           <li className={styles.Nav_Item}>
-            <NavLink to="/news">News</NavLink>
+            <NavLink to="/profilance-group/news">News</NavLink>
           </li>
           {authLink}
         </ul>
