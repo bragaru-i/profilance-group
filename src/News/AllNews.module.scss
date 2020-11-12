@@ -8,6 +8,18 @@
   &_List {
     padding-top: 1rem;
   }
+  &_Header {
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &_Title {
+    width: 30rem;
+  }
+  &_Description {
+    padding-left: 2rem;
+  }
 }
 .AddNew {
   position: absolute;

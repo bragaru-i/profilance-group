@@ -29,6 +29,10 @@ const AllNews = ({ auth, news, approveNews, deleteNews }) => {
   newsDisplay = (
     <>
       <ul className={styles.News_List}>
+        <li className={styles.News_Header}>
+          <span className={styles.News_Title}>Title w/ date</span>
+          <span className={styles.News_Description}> Content</span>
+        </li>
         {data.map((article) => {
           return (
             <ArticleInAList
