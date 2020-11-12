@@ -6,11 +6,11 @@ import rootReducer from './reducers/rootReducer';
 
 // load store from local storage
 
-// import { loadState, saveState } from './localStorage';
+import { loadState, saveState } from './localStorage';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// const persistedStore = loadState();
+const persistedStore = loadState();
 
 const middlewares = [
   thunk,
@@ -19,10 +19,10 @@ const middlewares = [
 // const middlewares = [thunk];
 const store = createStore(
   rootReducer,
-  //   persistedStore,
+  persistedStore,
   composeEnhancers(applyMiddleware(...middlewares))
 );
-// store.subscribe(() => {
-//   saveState(store.getState());
-// });
+store.subscribe(() => {
+  saveState(store.getState());
+});
 export default store;

@@ -2,32 +2,37 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import HomePage from './HomePage/HomePage';
+import NotFoundPage from './UI/NotFound/NotFoundPage';
+
+import AllNews from './News/AllNews';
+import AddArticle from './News/components/AddArticle/AddArticle';
+import Article from './News/components/Article/Article';
+
 const ROUTES = [
   { path: '/', key: 'ROOT', exact: true, component: HomePage },
 
-
   {
-    path: '/page-a',
-    key: 'Page-A',
+    path: '/news',
+    key: 'NEWS',
     component: RenderRoutes,
     routes: [
       {
-        path: '/',
-        key: 'PAGE-A_ROOT',
+        path: '/news',
+        key: 'NEWS_ROOT',
         exact: true,
-        component: () => <h1>Page-A index</h1>,
+        component: AllNews,
       },
       {
-        path: '/page-a/temp1',
-        key: 'PAGE-A_TEMP1',
+        path: '/news/add',
+        key: 'NEWS_ADD',
         exact: true,
-        component: () => <h1>Page-A/ temp1</h1>,
+        component: AddArticle,
       },
       {
-        path: '/page-a/temp2',
-        key: 'PAGE-A_TEMP1',
+        path: '/news/:newsid',
+        key: `A_PARTICULAR_NEW`,
         exact: true,
-        component: () => <h1>Page-A/ temp2</h1>,
+        component: Article,
       },
     ],
   },
@@ -48,7 +53,7 @@ export function RenderRoutes({ routes }) {
       {routes.map((route, i) => {
         return <RouteWithSubRoutes key={route.key} {...route} />;
       })}
-      <Route component={() => <h1>Not Found!</h1>} />
+      <Route component={NotFoundPage} />
     </Switch>
   );
 }

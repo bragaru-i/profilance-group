@@ -2,6 +2,7 @@ import * as actionsTypes from './types';
 
 export const login = (formData) => {
   const { user, pass } = formData;
+
   if (user === 'user' && pass === 'user') {
     return {
       type: actionsTypes.AUTHENTICATE,

@@ -1,0 +1,18 @@
+.Container {
+  margin: 0 auto;
+  width: 75%;
+}
+.Title {
+  position: relative;
+  width: 100%;
+}
+.Name {
+  font-size: 3rem;
+  text-align: center;
+  display: block;
+}
+.Time {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

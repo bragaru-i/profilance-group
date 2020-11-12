@@ -9,16 +9,21 @@ const LoginForm = ({ login, closeLogin, auth }) => {
     user: '',
     pass: '',
   });
-  console.log(formData);
+
+  const [showPass, setShowPass] = useState(false);
+  const passType = showPass ? 'text' : 'password';
+  // Controls sumbit form and change on input
   const onChangeHandler = (e) =>
     setFormData((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
   const onSumbitHandler = (e) => {
     e.preventDefault();
     login(formData);
   };
+
   const errorMessage = auth.error && auth.error !== '' && (
     <div className={styles.ErrorLogin}>{auth.error}</div>
   );
+
   return (
     <form className={styles.Form} onSubmit={onSumbitHandler}>
       {errorMessage}
@@ -32,11 +37,14 @@ const LoginForm = ({ login, closeLogin, auth }) => {
       <Input
         name="pass"
         id="pass"
-        type="password"
+        type={passType}
         value={formData.pass}
         inputOnChange={onChangeHandler}
         placeholder="Password:"
       />
+      <span className={styles.Password_Icon} onClick={() => setShowPass(!showPass)}>
+        show
+      </span>
       <Input name="submit" id="submit" type="submit" value="Submit" />
     </form>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { NavLink } from 'react-router-dom';
+import Icon from '../../../icons/Icons';
 import { logout } from '../../../store/actions/authAction';
 
 import Modal from '../../../UI/Modal/Modal';
@@ -14,21 +15,31 @@ const Navigation = ({ logout, auth }) => {
 
   const authLink = auth.isAuth ? (
     <>
-      {auth.role} <span onClick={logout}>Logout</span>{' '}
+      <li className={styles.Nav_Item__Logged}>
+        <Icon name="user" width="2rem" />
+        {auth.role}
+      </li>
+      <li className={styles.Nav_Item}>
+        <span onClick={logout}>Logout</span>
+      </li>
     </>
   ) : (
-    <span onClick={() => setShowLogin(true)}>Login</span>
+    <li className={styles.Nav_Item}>
+      <span onClick={() => setShowLogin(true)}>Login</span>
+    </li>
   );
   const closeLogin = () => setShowLogin(false);
+  const loginController = !showLogin || auth.isAuth ? false : true;
   const login = showLogin && (
-    <Modal title="Login Form" open={showLogin} closeModal={closeLogin}>
+    <Modal title="Login Form" open={loginController} closeModal={closeLogin}>
       <LoginForm closeLogin={closeLogin} />
     </Modal>
   );
-  console.log(showLogin);
   return (
     <div className={styles.Nav}>
-      <div className={styles.Nav_Logo}>A simple web-app</div>
+      <div className={styles.Nav_Logo}>
+        <h4>A simple web-app</h4>
+      </div>
       <nav className={styles.Nav_Items_Container}>
         <ul className={styles.Nav_Items}>
           <li className={styles.Nav_Item}>
@@ -37,7 +48,7 @@ const Navigation = ({ logout, auth }) => {
           <li className={styles.Nav_Item}>
             <NavLink to="/news">News</NavLink>
           </li>
-          <li className={styles.Nav_Item}>{authLink}</li>
+          {authLink}
         </ul>
         {login}
       </nav>

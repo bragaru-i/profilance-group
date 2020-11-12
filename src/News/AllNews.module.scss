@@ -1,0 +1,21 @@
+.News {
+  position: relative;
+  margin: 0 auto;
+  padding: 1.2rem 1rem;
+  h3 {
+    text-align: center;
+  }
+  &_List {
+    padding-top: 1rem;
+  }
+}
+.AddNew {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+  }
+}

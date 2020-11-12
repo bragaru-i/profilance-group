@@ -1,0 +1,17 @@
+.Form {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Textarea {
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 1rem 2rem;
+  height: 20rem;
+  font-style: italic;
+  border: 0.2rem black solid;
+  border: 1px solid #dadfe3;
+}

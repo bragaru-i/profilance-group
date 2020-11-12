@@ -9,12 +9,12 @@ const Input = ({
   inputId,
   value,
   inputOnChange,
+
   label = null,
   placeholder = 'Placeholder text here...',
 }) => {
   let style = [styles.Input];
   if (type === 'submit') style.push(styles.Button);
-  console.log(style.join(' '));
   return (
     <div className={style.join(' ')}>
       <label htmlFor={inputId}>
